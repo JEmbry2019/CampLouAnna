@@ -18,8 +18,8 @@ namespace CampLouAnna.Models
         [Column("FirstName")]
         [Display(Name = "First Name")]
         public string FirstMidName { get; set; }
-        public string email { get; set; }
-        public string phone { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
@@ -31,7 +31,7 @@ namespace CampLouAnna.Models
         {
             get
             {
-                return LastName + ", " + FirstMidName;
+                return FirstMidName + " " + LastName;
             }
         }
 
