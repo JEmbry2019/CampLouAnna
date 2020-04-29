@@ -14,23 +14,26 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ID" />
             <div class="form-group">
-                <label asp-for="CamperID" class="control-label"></label>
+                 @*Line 17 changed from CamperID to Camper so Enum label would display properly*@
+                <label asp-for="Camper" class="control-label"></label>
                 <select asp-for="CamperID" class="form-control" asp-items="ViewBag.CamperID"></select>
                 <span asp-validation-for="CamperID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MealID" class="control-label"></label>
+                @*Line 23 changed from MealID to Meal so Enum Label would display properly*@
+                <label asp-for="Meal" class="control-label"></label>
                 <select asp-for="MealID" class="form-control" asp-items="ViewBag.MealID"></select>
                 <span asp-validation-for="MealID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="GameID" class="control-label"></label>
+                @*Line 30 changed from GameID to Game so Enum label would display properly*@
+                <label asp-for="Game" class="control-label"></label>
                 <select asp-for="GameID" class="form-control" asp-items="ViewBag.GameID"></select>
                 <span asp-validation-for="GameID" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Grade" class="control-label"></label>
-                 @* Replace ln 33 for 44 <input asp-for="Grade" class="form-control" />*@
+                 @* Replace ln 36 for 37 <input asp-for="Grade" class="form-control" />*@
                  <select asp-for="Grade" class="form-control" asp-items="Html.GetEnumSelectList<Grade>()"></select>
                 <span asp-validation-for="Grade" class="text-danger"></span>
             </div>
