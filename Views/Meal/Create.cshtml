@@ -14,17 +14,20 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Breakfast" class="control-label"></label>
-                <select asp-for="Breakfast" class="form-control"></select>
+                @* Ln 18 Code for Enum*@
+                <select asp-for="Breakfast" class="form-control"asp-items="Html.GetEnumSelectList<Morn>()"></select>
                 <span asp-validation-for="Breakfast" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Lunch" class="control-label"></label>
-                <select asp-for="Lunch" class="form-control"></select>
+                 @* Ln 24 Code for Enum*@
+                <select asp-for="Lunch" class="form-control"asp-items="Html.GetEnumSelectList<Mid>()"></select>
                 <span asp-validation-for="Lunch" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Snack" class="control-label"></label>
-                <select asp-for="Snack" class="form-control"></select>
+                 @* Ln 30 Code for Enum*@
+                <select asp-for="Snack" class="form-control" asp-items="Html.GetEnumSelectList<Food>()"></select>
                 <span asp-validation-for="Snack" class="text-danger"></span>
             </div>
             <div class="form-group">

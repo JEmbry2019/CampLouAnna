@@ -24,5 +24,7 @@ namespace CampLouAnna.Models
         public Recreation2 RecRoom { get; set; }
         public Recreation3 Computer { get; set;}
 
+        public string Display {get{return $"{Gym}, { RecRoom}, and {Computer}";}}
+
     }
 }

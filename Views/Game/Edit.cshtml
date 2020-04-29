@@ -15,17 +15,20 @@
             <input type="hidden" asp-for="ID" />
             <div class="form-group">
                 <label asp-for="Gym" class="control-label"></label>
-                <select asp-for="Gym" class="form-control"></select>
+                 @*  Ln 19 changed for Enum to display properly <select asp-for="Gym" class="form-control"></select>*@
+                 <select asp-for="Gym" class="form-control" asp-items="Html.GetEnumSelectList<Recreation1>()"></select>
                 <span asp-validation-for="Gym" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="RecRoom" class="control-label"></label>
-                <select asp-for="RecRoom" class="form-control"></select>
+                  @*Line 25 added fro Enum to Display properly.  class="form-control"></select> *@
+                <select asp-for="RecRoom" class="form-control" asp-items="Html.GetEnumSelectList<Recreation2>()"></select>
                 <span asp-validation-for="RecRoom" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Computer" class="control-label"></label>
-                <select asp-for="Computer" class="form-control"></select>
+                 @*line 31 added for Enum to display   class="form-control"></select>*@
+                <select asp-for="Computer" class="form-control" asp-items="Html.GetEnumSelectList<Recreation3>()"></select>
                 <span asp-validation-for="Computer" class="text-danger"></span>
             </div>
             <div class="form-group">

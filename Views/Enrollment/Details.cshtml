@@ -20,19 +20,46 @@
             @Html.DisplayNameFor(model => model.Camper)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Camper.FirstMidName)
+            @Html.DisplayFor(model => model.Camper.FullName)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Meal)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Meal.ID)
+           @* @Html.DisplayFor(model => model.Meal.Breakfast)
+           
+           Replace the code on line 29 with  a line of code for each item)
+           Similiar to code in Index.csHTML file *@
+
+                         <td>
+                            @Html.DisplayFor(model => model.Meal.Breakfast)
+                           
+                            @Html.DisplayFor(model => model.Meal.Lunch)
+                    
+                            @Html.DisplayFor(model => model.Meal.Snack)
+                            </td>       
+
+
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Game)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Game.ID)
+           @* @Html.DisplayFor(model => model.Game.ID)  
+           
+           Replace the code on line 48  with  a line of code for each item)
+           Similiar to code in Index.csHTML file*@
+                     <td>
+                    @Html.DisplayFor(model => model.Game.Gym)
+       
+                    @Html.DisplayFor(model => model.Game.RecRoom)
+                
+                    @Html.DisplayFor(model => model.Game.Computer)
+                </td>
+
+
+
+
         </dd>
     </dl>
 </div>

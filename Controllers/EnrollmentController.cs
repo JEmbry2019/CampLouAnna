@@ -22,8 +22,8 @@ namespace CampLouAnna.Controllers
         // GET: Enrollment
         public async Task<IActionResult> Index()
         {
-            var campLouAnnaContext = _context.Enrollments.Include(e => e.Camper).Include(e => e.Game).Include(e => e.Meal);
-            return View(await campLouAnnaContext.ToListAsync());
+            var projPracContext = _context.Enrollments.Include(e => e.Camper).Include(e => e.Game).Include(e => e.Meal);
+            return View(await projPracContext.ToListAsync());
         }
 
         // GET: Enrollment/Details/5
@@ -50,9 +50,13 @@ namespace CampLouAnna.Controllers
         // GET: Enrollment/Create
         public IActionResult Create()
         {
-            ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FirstMidName");
-            ViewData["GameID"] = new SelectList(_context.Games, "ID", "ID");
-            ViewData["MealID"] = new SelectList(_context.Meals, "ID", "ID");
+        // Lines 54 -56 adds all 3 selections to Enum view on Create page.
+            ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FullName");
+            ViewData["GameID"] = new SelectList(_context.Games, "ID", "Display");
+            ViewData["MealID"] = new SelectList(_context.Meals, "ID", "FoodDisplay");
+
+            // ViewData["GameID"] = new SelectList(_context.Games, "ID", "RecRoom");
+            // ViewData["GameID"] = new SelectList(_context.Games, "ID", "Computer");
             return View();
         }
 
@@ -71,8 +75,14 @@ namespace CampLouAnna.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FirstMidName", enrollment.CamperID);
-            ViewData["GameID"] = new SelectList(_context.Games, "ID", "ID", enrollment.GameID);
-            ViewData["MealID"] = new SelectList(_context.Meals, "ID", "ID", enrollment.MealID);
+            ViewData["GameID"] = new SelectList(_context.Games, "ID", "Gym", enrollment.GameID);
+            ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Breakfast", enrollment.MealID);
+
+                ViewData["GameID"] = new SelectList(_context.Games, "ID", "RecRoom", enrollment.GameID);
+                ViewData["GameID"] = new SelectList(_context.Games, "ID", "Computer", enrollment.GameID);
+
+                ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Lunch", enrollment.MealID);
+                ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Snack", enrollment.MealID);
             return View(enrollment);
         }
 
@@ -89,9 +99,26 @@ namespace CampLouAnna.Controllers
             {
                 return NotFound();
             }
-            ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FirstMidName", enrollment.CamperID);
-            ViewData["GameID"] = new SelectList(_context.Games, "ID", "ID", enrollment.GameID);
-            ViewData["MealID"] = new SelectList(_context.Meals, "ID", "ID", enrollment.MealID);
+           // ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FirstMidName", enrollment.CamperID);
+           // ViewData["GameID"] = new SelectList(_context.Games, "ID", "ID", enrollment.GameID);
+           // ViewData["MealID"] = new SelectList(_context.Meals, "ID", "ID", enrollment.MealID);
+
+
+                     ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FirstMidName", enrollment.CamperID);
+                     ViewData["GameID"] = new SelectList(_context.Games, "ID", "Display", enrollment.GameID);
+                     ViewData["MealID"] = new SelectList(_context.Meals, "ID", "FoodDisplay", enrollment.MealID);
+
+                   // ViewData["GameID"] = new SelectList(_context.Games, "ID", "RecRoom", enrollment.GameID);
+                   // ViewData["GameID"] = new SelectList(_context.Games, "ID", "Computer", enrollment.GameID);
+
+                   // ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Lunch", enrollment.MealID);
+                   // ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Snack", enrollment.MealID);
+
+
+
+
+
+
             return View(enrollment);
         }
 
@@ -127,9 +154,21 @@ namespace CampLouAnna.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FirstMidName", enrollment.CamperID);
-            ViewData["GameID"] = new SelectList(_context.Games, "ID", "ID", enrollment.GameID);
-            ViewData["MealID"] = new SelectList(_context.Meals, "ID", "ID", enrollment.MealID);
+            // ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FirstMidName", enrollment.CamperID);
+            // ViewData["GameID"] = new SelectList(_context.Games, "ID", "ID", enrollment.GameID);
+            // ViewData["MealID"] = new SelectList(_context.Meals, "ID", "ID", enrollment.MealID);
+
+                ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FirstMidName", enrollment.CamperID);
+                ViewData["GameID"] = new SelectList(_context.Games, "ID", "Gym", enrollment.GameID);
+                ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Breakfast", enrollment.MealID);
+
+                ViewData["GameID"] = new SelectList(_context.Games, "ID", "RecRoom", enrollment.GameID);
+                ViewData["GameID"] = new SelectList(_context.Games, "ID", "Computer", enrollment.GameID);
+
+                ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Lunch", enrollment.MealID);
+                ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Snack", enrollment.MealID);
+
+
             return View(enrollment);
         }
 
