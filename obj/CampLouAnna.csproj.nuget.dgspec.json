@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jmsem\\Desktop\\ProjTestFolder\\CampLouAnna\\CampLouAnna.csproj": {}
+    "C:\\Users\\jmsem\\Desktop\\CampLouAnna\\CampLouAnna.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jmsem\\Desktop\\ProjTestFolder\\CampLouAnna\\CampLouAnna.csproj": {
+    "C:\\Users\\jmsem\\Desktop\\CampLouAnna\\CampLouAnna.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jmsem\\Desktop\\ProjTestFolder\\CampLouAnna\\CampLouAnna.csproj",
+        "projectUniqueName": "C:\\Users\\jmsem\\Desktop\\CampLouAnna\\CampLouAnna.csproj",
         "projectName": "CampLouAnna",
-        "projectPath": "C:\\Users\\jmsem\\Desktop\\ProjTestFolder\\CampLouAnna\\CampLouAnna.csproj",
+        "projectPath": "C:\\Users\\jmsem\\Desktop\\CampLouAnna\\CampLouAnna.csproj",
         "packagesPath": "C:\\Users\\jmsem\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jmsem\\Desktop\\ProjTestFolder\\CampLouAnna\\obj\\",
+        "outputPath": "C:\\Users\\jmsem\\Desktop\\CampLouAnna\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jmsem\\AppData\\Roaming\\NuGet\\NuGet.Config",

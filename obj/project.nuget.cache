@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V5OVkg7cV3eYxUDbRA/Xzeg9b+VjXctCDnboPhLir8Q6JcTh+/4urJpERV+xl0sJOmeAgni60wg5XsRmo0sTNw==",
+  "dgSpecHash": "5Db9xRf20NjkelB8etWVu7OHHA+3d1Z4jHQxI4dOXJBdzHdIr7ijjc+BlStbi8Q+wB9JWIcqP51/pomvaABflQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jmsem\\Desktop\\ProjTestFolder\\CampLouAnna\\CampLouAnna.csproj",
+  "projectFilePath": "C:\\Users\\jmsem\\Desktop\\CampLouAnna\\CampLouAnna.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jmsem\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\jmsem\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
